@@ -14,17 +14,8 @@ if (!token || token ==="null" || token === "undefined")
 fetch("")
 headers: { Authoriztion: `Bearer ${token}` }
 })
- .then((res) => {
-    if (res.status === 401) {
-       localStorage.removeItem("token");
-          throw new Error("Unauthorized");
-       }
-    if (!res.ok) throw new Error("Failed to fetch profile");
-   return res.json();
-     })
-    .then((data) => setUsername(data.username))
-      .catch(() => setUsername(null));
- }, [])
+
+
     return (
         <nav className={style.navstyle}>
             <ul className={style.liststyle}>
