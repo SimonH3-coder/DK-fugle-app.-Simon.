@@ -10,7 +10,21 @@ export async function getBirds() {
 if (!response.ok) {
   throw new Error("Network response was not ok");
 }
-return response.json();
+const data = await response.json();
 
+}
+
+{
+  const getData = data.map((bird: any) => ({
+    birdname: bird.birdname,
+    scientificname: bird.scientificname,
+    size: bird.size,
+    weight: bird.weight,
+    habitats: bird.habitats
+  }));
+
+    console.log(getData);
+    return getData;
+    
 }
   

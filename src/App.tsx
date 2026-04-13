@@ -13,6 +13,8 @@ const [birdData, setbirdData] = useState(null)
         const birds = await getBirds()
         console.log(birds)
         setbirdData(birds)
+
+    
       } catch (error) {
         console.error(error)
       }
