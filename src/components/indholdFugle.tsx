@@ -1,7 +1,7 @@
 
 
 export async function getBirds() {
-  const response = await fetch ('https://api.ebird.org/v2/data/obs/dk/recent/notable?detail=full', {
+  const response = await fetch (`https://api.ebird.org/v2/data/obs/DK/recent`, {
     headers: {
       'X-eBirdApiToken': 'phfs1qktjj86'
     }
