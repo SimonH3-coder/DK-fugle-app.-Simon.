@@ -11,20 +11,8 @@ if (!response.ok) {
   throw new Error("Network response was not ok");
 }
 const data = await response.json();
+return data;
 
 }
 
-{
-  const getData = data.map((bird: any) => ({
-    birdname: bird.birdname,
-    scientificname: bird.scientificname,
-    size: bird.size,
-    weight: bird.weight,
-    habitats: bird.habitats
-  }));
-
-    console.log(getData);
-    return getData;
-    
-}
   
