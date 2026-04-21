@@ -61,7 +61,7 @@ const limitCacheSize = (cacheName, numberOfAllowedFiles) => {
         }
     })
 })
-}
+
 
 // Kalder limit cache funktionen
 limitCacheSize(dynamicCacheName, 20)
